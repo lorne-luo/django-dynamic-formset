@@ -51,6 +51,7 @@
                             {% if form.instance.pk %}{{ form.DELETE }}{% endif %}
                             {{ form.product }}
                         </td>
+                        <td>{{ form.name }}</td>
                         <td>{{ form.quantity }}</td>
                     </tr>
                     {% endfor %}

@@ -36,7 +36,7 @@ class AutoCompleteOrderedItemForm(models.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(AutoCompleteOrderedItemForm, self).__init__(*args, **kwargs)
-        self.fields['product'].widget = widgets.TextInput(attrs={'class': 'autocomplete-me'})
+        self.fields['name'].widget = widgets.TextInput(attrs={'class': 'autocomplete-me'})
 
 def get_ordereditem_formset(form, formset=models.BaseInlineFormSet, **kwargs):
     return models.inlineformset_factory(Order, OrderedItem, form, formset, **kwargs)
